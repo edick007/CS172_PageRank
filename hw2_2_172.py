@@ -30,11 +30,13 @@ def done_test(prev, curr, saved):
     value = 1
     total = 0
     for i in range(len(PR_current)):
-        diff = curr[i] - saved[i]
-        total += abs(diff)
-    print('total diff', total)
-    if(total <= e):
-        value = 0
+        if(i != 3):
+            diff = curr[i] - saved[i]
+            #total += abs(diff)
+    #print('total diff', total)
+        if(abs(diff) <= e):
+            value = 0
+            break
     return value
 
 #def PR_1():
